@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Abb" name="Abb Repository" version="1.0.0" provider-name="YOS.SOY">
-    <requires>
-        <import addon="xbmc.addon" version="12.0.0"/>
-    </requires>
-    <extension point="xbmc.addon.repository" name="Abb Repository">
-        <dir>
-
-
+<addons>
+    <addon id="repository.Abb" name="Abb Repository" version="1.0.0" provider-name="YOS.SOY">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Abb Repository">
+            <dir>
             <info compressed="false">https://raw.githubusercontent.com/yonni55555/repository.Abb/main/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/yonni55555/repository.Abb/main/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/yonni55555/repository.Abb/main/zips/</datadir>
