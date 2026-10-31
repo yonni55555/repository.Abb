@@ -16,5 +16,10 @@
         <summary lang="he">הריפו של Abb</summary>
         <description lang="he">מאגר הרחבות אישי לקודי</description>
         <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
+
