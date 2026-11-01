@@ -24,6 +24,73 @@
     </addon>
 </addons>
 
+    ﻿
+<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="9.1.7" provider-name="Based_Skid">
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Force Close Kodi</summary>
+    <description lang="en"></description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+    <addon id="plugin.program.cleaner.custom" name="[B][COLOR aqua]מנקה נתיבים מותאם אישית[/COLOR][/B]" version="1.2.0" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="he">ניקוי מטמון ונתיבים מוגדרים אישית</summary>
+    <description lang="he">תוסף המאפשר לנקות קבצי זבל מובנים של קודי לצד תיקיות ספציפיות לבחירת המשתמש.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+    <addon id="plugin.video.advanced_rec" name="[B][COLOR aqua]-ההקלטות שלי-[/COLOR][/B]" version="1.3.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.25.1" />
+    </requires>
+    
+    <!-- הבלוק הזה היה חסר - הוא מגדיר את ההרחבה כתוכנת וידאו -->
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    
+    <!-- שירות הרקע למשימות מתוזמנות -->
+    <extension point="xbmc.service" library="service.py" />
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <!-- כפתור הקלט: פעיל בכל מקום בקודי בקליק ימני -->
+            <item library="main.py">
+                <label>[B][COLOR aqua]הקלט[/COLOR][/B]</label>
+                <visible>true</visible>
+            </item>
+        </menu>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he">הרחבת הקלטות מתקדמת</summary>
+        <description lang="he">הקלטה מכל מקור כולל תזמון ויקיצה אוטומטית.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
     <addon id="plugin.video.fofo" name="[B][COLOR aqua]פופו[/COLOR][/B]" provider-name="Forge Project" version="0.0.1">
     <requires>
         <import addon="xbmc.python" version="3.0.1"/>
@@ -79,6 +146,120 @@
 		</extension>
 	</addon>
 
+    <addon id="plugin.video.ilfavs" name="[B][COLOR aqua]ניהול מועדפים[/COLOR][/B]" version="1.0.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR] [/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="context.py">
+                <label>[COLOR red][B]הוסף למועדפי IL[/B][/COLOR]</label>
+                <visible>!ListItem.IsEmpty</visible>
+            </item>
+            <item library="context.py">
+                <label>[COLOR orange][B]הוסף פריט מותאם אישית[/B][/COLOR]</label>
+                <visible>String.StartsWith(ListItem.FolderPath,plugin://plugin.video.ilfavs)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he_IL">ניהול מועדפים מתקדם</summary>
+        <description lang="he_IL">הרחבה חדשה בשם ניהול מועדפים IL היא כלי מדיה סנטר מתקדם ועוצמתי לקודי, המעניק שליטה מלאה וארגון חכם לכל תוכן דיגיטלי. ההרחבה מאפשרת למשתמשים ליצור עץ קטגוריות אישי ללא הגבלה, לנהל רשימות שידור (M3U) עם רענון אוטומטי וניקוי שמות חכם, ולהוסיף פקודות מערכת וקיצורי דרך (ווינדוס ואנדרואיד) ישירות לממשק. עם מערכת גיבוי ושחזור אמינה, מנוע חיפוש גלובלי וממשק מעוצב הכולל רקעים ואייקונים מותאמים, מדובר בפתרון המושלם למי שרוצה להפוך את קודי למרכז בידור אישי, מסודר ונגיש בלחיצת כפתור.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+    ﻿
+<addon id="plugin.video.spotitube" name="[B][COLOR aqua]יוטיוב מיוזיק[/COLOR][/B]" version="3.0.7+matrix.1" provider-name="realvito (inspired by L0RE)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+		<import addon="script.common.plugin.cache" version="2.6.2+matrix.1"/>
+		<import addon="plugin.video.youtube" version="6.8.1+matrix.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Chartplayer für Musikvideos</summary>
+		<summary lang="en_GB">Chartplayer for Musicvideos</summary>
+		<description lang="de_DE">Musiktitel aus verschiedenen Quellen z.B. Beatport, Billboard, iTunes, Officialcharts etc. auswählen und das entsprechende Video über YouTube abspielen.[CR][CR]Für mehr Informationen zu allen Neuerungen siehe - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<description lang="en_GB">Select music titles from various sources e.g. Beatport, Billboard, iTunes, Officialcharts etc. and play the corresponding video via YouTube.[CR][CR]For more information about all new features see - CHANGELOG.[CR]     TEST IT AND LIKE IT</description>
+		<disclaimer lang="de_DE">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+		<forum>https://www.kodinerds.net/thread/55451-l0res-blog-realvitos-fixing-thread/</forum>
+		<website></website>
+		<email></email>
+		<mainsource>https://github.com/Collabsvito/REpo-AiO/</mainsource>
+		<source>https://github.com/Collabsvito/REpo-AiO/tree/master/MATRIX/plugin.video.spotitube</source>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.jpg</fanart>
+		</assets>
+		<news>
+[B][COLOR orangered]Version 3.0.6+matrix.1  (16.09.2023)[/COLOR][/B]
+- fixed: 'ONCE AGAIN' all Folder under "Beatport" generate Errors (TypeError: object of type 'NoneType' has no len())
+- fixed: 'ONCE AGAIN' all Folder under "Official Charts" generate Errors (IndexError: list index out of range)
+- fixed: Sometimes 'Search on Deezer' generate Error if special character or german Umlaut in keyword
+
+[B][COLOR orangered]Version 3.0.5+matrix.1  (03.09.2023)[/COLOR][/B]
+- fixed: all Folder under "Beatport" are empty (new Website)
+- fixed: all "Billboard" Charts by Country and added some new Countries
+- fixed: all Folder under "Official Charts" generate Errors (Website-Structure changes)
+- added: Hide additional information (blue font) in the title (settings)
+- optimized: Code cleanup
+		</news>
+	</extension>
+</addon>
+
+    <addon id="plugin.video.tv" name="[B][COLOR aqua] TV-EPG[/COLOR][/B]" version="1.0.2" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he">הזרמת תוכן מרשימות השמעה המאפשרת גם שימוש בלוח שידורים</summary>
+        <description lang="he">הזרמת תוכן מרשימות השמעה המאפשרת גם שימוש בלוח שידורים</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+    <addon id="plugin.video.tv.mac" name="[B][COLOR aqua] TV-MAC[/COLOR][/B]" version="1.0.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he">הזרמת ערוצים מרשימות STB</summary>
+        <description lang="he">[B][COLOR aqua] TV-MAC[/COLOR][/B]</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
     <addon id="repository.Abb" name="Abb Repository" version="1.0.0" provider-name="YOS.SOY">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -98,32 +279,6 @@
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-    </extension>
-</addon>
-
-    <addon id="service.subtitles.All_Subs" name="DarkSubs" version="5.0.6" provider-name="Sbs">
-  <requires>
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.chardet" />
-  </requires>
-  <extension point="xbmc.subtitle.module" library="start.py"  start="startup"></extension>
-  <extension point="xbmc.service" library="autosub.py"/>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en">Collect Subs From sites</summary>
-    <description lang="en">Enjoy Hebrew subtitles from all the top websites.</description>
-    <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-    </assets>
-    <language>en</language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  </extension>
-  <extension point="kodi.context.item" library="check_sub.py">
-        <item>
-            <label>[COLOR yellow][B]חפש כתוביות (DarkSubs)[/B][/COLOR]</label>
-            <visible>true</visible>
-        </item>
     </extension>
 </addon>
 
