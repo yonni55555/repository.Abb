@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.ilfavs" name="[B][COLOR aqua]ניהול מועדפים[/COLOR][/B]" version="1.0.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR] [/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="context.py">
+                <label>[COLOR red][B]הוסף למועדפי IL[/B][/COLOR]</label>
+                <visible>!ListItem.IsEmpty</visible>
+            </item>
+            <item library="context.py">
+                <label>[COLOR orange][B]הוסף פריט מותאם אישית[/B][/COLOR]</label>
+                <visible>String.StartsWith(ListItem.FolderPath,plugin://plugin.video.ilfavs)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he_IL">ניהול מועדפים מתקדם</summary>
+        <description lang="he_IL">הרחבה חדשה בשם ניהול מועדפים IL היא כלי מדיה סנטר מתקדם ועוצמתי לקודי, המעניק שליטה מלאה וארגון חכם לכל תוכן דיגיטלי. ההרחבה מאפשרת למשתמשים ליצור עץ קטגוריות אישי ללא הגבלה, לנהל רשימות שידור (M3U) עם רענון אוטומטי וניקוי שמות חכם, ולהוסיף פקודות מערכת וקיצורי דרך (ווינדוס ואנדרואיד) ישירות לממשק. עם מערכת גיבוי ושחזור אמינה, מנוע חיפוש גלובלי וממשק מעוצב הכולל רקעים ואייקונים מותאמים, מדובר בפתרון המושלם למי שרוצה להפוך את קודי למרכז בידור אישי, מסודר ונגיש בלחיצת כפתור.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

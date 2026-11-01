@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.advanced_rec" name="[B][COLOR aqua]-ההקלטות שלי-[/COLOR][/B]" version="1.3.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" version="2.25.1" />
+    </requires>
+    
+    <!-- הבלוק הזה היה חסר - הוא מגדיר את ההרחבה כתוכנת וידאו -->
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    
+    <!-- שירות הרקע למשימות מתוזמנות -->
+    <extension point="xbmc.service" library="service.py" />
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <!-- כפתור הקלט: פעיל בכל מקום בקודי בקליק ימני -->
+            <item library="main.py">
+                <label>[B][COLOR aqua]הקלט[/COLOR][/B]</label>
+                <visible>true</visible>
+            </item>
+        </menu>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he">הרחבת הקלטות מתקדמת</summary>
+        <description lang="he">הקלטה מכל מקור כולל תזמון ויקיצה אוטומטית.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>

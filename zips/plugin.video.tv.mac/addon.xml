@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<addon id="plugin.video.tv.mac" name="[B][COLOR aqua] TV-MAC[/COLOR][/B]" version="1.0.1" provider-name="[B][COLOR aqua]YOS.SOY[/COLOR][/B]">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="he">הזרמת ערוצים מרשימות STB</summary>
+        <description lang="he">[B][COLOR aqua] TV-MAC[/COLOR][/B]</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
