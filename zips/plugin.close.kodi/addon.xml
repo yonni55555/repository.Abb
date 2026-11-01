@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="9.1.7" provider-name="Based_Skid">
+<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="9.1.8" provider-name="Based_Skid">
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>executable</provides>
   </extension>
