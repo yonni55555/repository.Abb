@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+    <!-- המאגר שלך -->
     <addon id="repository.Abb" name="Abb Repository" version="1.0.0" provider-name="YOS.SOY">
         <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
+            <import addon="xbmc.addon" version="19.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="Abb Repository">
             <dir>
@@ -22,18 +23,33 @@
         </extension>
     </addon>
 
-    <addon id="plugin.video.seret.top" name="Seret.top" version="1.1.7" provider-name="yonni55555">
+    <!-- הרחבת עידן+ פלוס עם השם שלך כמפתח -->
+    <addon id="plugin.video.idanplus" name="עידן+ פלוס" version="4.0.4" provider-name="YOS.SOY">
         <requires>
-            <import addon="xbmc.python" version="3.0.0"/>
-            <import addon="script.module.urllib3" version="1.26.11"/>
+            <import addon="xbmc.addon" version="19.0.0"/>
+            <import addon="xbmc.python" version="3.0.1"/>
+            <import addon="script.module.requests"/>
+            <import addon="script.module.xmltodict"/>
+            <import addon="inputstream.adaptive" optional="true"/>
         </requires>
-        <extension point="xbmc.addon.video" library="main.py">
+        <extension point="xbmc.python.pluginsource" library="default.py">
             <provides>video</provides>
         </extension>
+        <extension point="xbmc.service" library="resources/lib/service.py" start="[login|startup]"/>
+        <extension library="resources/" point="xbmc.python.module" />
+        <extension library="resources/lib/" point="xbmc.python.module" />
         <extension point="xbmc.addon.metadata">
-            <summary lang="he">צפייה בתכני Seret.top</summary>
-            <description lang="he">תוסף צפייה ישירה מותאם אישית לקודי</description>
+            <reuselanguageinvoker>true</reuselanguageinvoker>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
             <platform>all</platform>
+            <summary lang="he">צפיה בערוצי עידן פלוס ובתכניות מהאתרים הרשמיים.</summary>
+            <description lang="he">צפיה בערוצי עידן פלוס ובתכניות מהאתרים הרשמיים.[CR]אפשרויות שונות בהגדרות ההרחבה ובקליק ימני על פריט ברשימה.</description>
+            <supportedcontent>
+                <content>tvshows</content>
+            </supportedcontent>
         </extension>
     </addon>
 </addons>
