@@ -24,6 +24,33 @@
     </addon>
 </addons>
 
+    <addon id="plugin.video.fofo" name="[B][COLOR aqua]פופו[/COLOR][/B]" provider-name="Forge Project" version="0.0.1">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+        <import addon="script.module.pil" version="1.1.7"/>
+        <import addon="script.module.requests" version="2.19.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/forge.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="he">גישה לתוכן שלך מ-Easynews וענני Debrid.</summary>
+        <description lang="he">Forge הוא הרחבת וידאו יעילה ל-Kodi המיועדת לדפדוף והפעלת תוכן מ-Easynews ומשירותי ה-debrid שלך. בנוי סביב קוד מקור מודרני וקל לתחזוקה עם חלונות מותאמים אישית עבור Discover, חיפוש ורשימות. מיועד למשתמשי Kodi מתקדמים. עליך להיות הבעלים של התוכן בכל מדיה שתפעיל באמצעות הרחבה זו.</description>
+        <platform>all</platform>
+        <disclaimer lang="he">יוצר הרחבה זו אינו מארח אף אחד מהתכנים שנמצאים בה ואינו קשור בשום צורה לספקי התוכן.</disclaimer>
+        <license>GPL-3.0-or-later</license>
+        <assets>
+            <icon>resources/media/addon_icons/forge_icon_01.png</icon>
+            <clearlogo>resources/media/addon_icons/forge_clearlogo.png</clearlogo>
+            <fanart>resources/media/forge_fanart.jpg</fanart>
+        </assets>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
+    </extension>
+</addon>
+
     ﻿
 	<addon id="plugin.video.idanplus" name="עידן+ פלוס" version="4.0.4" provider-name="Fishenzon">
 		<requires>
@@ -71,32 +98,6 @@
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-    </extension>
-</addon>
-
-    <addon id="service.subtitles.All_Subs" name="DarkSubs" version="5.0.6" provider-name="Sbs">
-  <requires>
-    <import addon="script.module.requests" version="2.9.1" />
-    <import addon="script.module.chardet" />
-  </requires>
-  <extension point="xbmc.subtitle.module" library="start.py"  start="startup"></extension>
-  <extension point="xbmc.service" library="autosub.py"/>
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en">Collect Subs From sites</summary>
-    <description lang="en">Enjoy Hebrew subtitles from all the top websites.</description>
-    <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-    </assets>
-    <language>en</language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  </extension>
-  <extension point="kodi.context.item" library="check_sub.py">
-        <item>
-            <label>[COLOR yellow][B]חפש כתוביות (DarkSubs)[/B][/COLOR]</label>
-            <visible>true</visible>
-        </item>
     </extension>
 </addon>
 
