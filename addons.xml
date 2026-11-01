@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
     ﻿
-<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="9.1.7" provider-name="Based_Skid">
+<addon id="plugin.close.kodi" name="[COLOR red] Force Close Kodi[/COLOR] " version="9.1.8" provider-name="Based_Skid">
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>executable</provides>
   </extension>
@@ -153,12 +153,11 @@
 </addon>
 
     ﻿
-<addon id="plugin.video.spotitube" name="[B][COLOR aqua]יוטיוב מיוזיק[/COLOR][/B]" version="3.0.7+matrix.1" provider-name="realvito (inspired by L0RE)">
+<addon id="plugin.video.spotitube" name="[B][COLOR aqua]יוטיוב מיוזיק[/COLOR][/B]" version="3.0.8" provider-name="YOS.SOY">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.requests" version="2.22.0+matrix.1"/>
-		<import addon="script.common.plugin.cache" version="2.6.2+matrix.1"/>
-		<import addon="plugin.video.youtube" version="6.8.1+matrix.1"/>
+		<import addon="plugin.video.youtube" version="7.0.0"/>
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video audio</provides>
